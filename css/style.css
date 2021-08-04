@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very--dark-cyan: hsl(179, 100%, 13%);
+    /* (background, headings, buttons) */
+    --Very--light-gray: rgb(242, 242, 242); 
+    --font-parrafo: 'Lexend Deca', sans-serif;
+    --font-headings: 'Big Shoulders Display', cursive;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--Very--light-gray);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    font-size: 1.5rem;
+    font-family: var(--font-parrafo);
+}
+
+p {
+    line-height: 1.6;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+img {
+    max-width: 100%;
+}
+
+
+.attribution {
+    padding: 1rem;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* contenedor */
+.contenedor {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    padding: 30px;
+}
+
+.item > img {
+    margin-bottom: 3.7rem;
+}
+
+.item > h2 {
+    margin-bottom: 3.7rem;
+    color: var(--Very--light-gray);
+    font-family: var(--font-headings);
+    font-size: 2.8rem;
+    text-transform: uppercase;
+}
+
+.item .btn {
+    display: inline-block;
+    background: none;
+    border: none;
+    padding: 1.4rem 2.6rem;
+    background: var(--Very--light-gray);
+    border-radius: 2rem;
+}
+
+.item > p {
+    margin-bottom: 2.6rem;
+}
+
+/* top right bottom left */
+.color-1 {
+    border-radius: 1rem 1rem 0 0;
+    background: var(--Bright-orange);
+}
+
+.color-2 {
+    background: var(--Dark-cyan);
+}
+
+.color-3 {
+    border-radius: 0 0 1rem 1rem;
+    background: var(--Very--dark-cyan);
+}
+
+@media screen and (min-width: 768px) {
+    .contenedor {
+        padding: 10px;
+        width: 100%;
+        max-width: 920px;
+        min-height: 100vh;
+        margin-right: auto;
+        margin-left: auto;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .item {
+        padding: 2rem;
+        width: 100%;
+        max-width: 320px;
+        min-height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .item img {
+        width: 30%;
+    }
+
+    .item .btn {
+        align-self: flex-start;
+        cursor: pointer;
+    }
+
+    .item .btn:hover {
+        border: 1px solid var(--Very--light-gray);
+        background: none;
+        color: white;
+    }
+
+    .color-1 {
+        border-radius: 2rem 0 0 2rem;
+    }
+
+    .color-3 {
+        border-radius: 0 2rem 2rem 0;
+    }
+}
